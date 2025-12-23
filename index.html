@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Main Layout - Liquid Glass</title>
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, sans-serif;
+    }
+
+    body {
+      background: #0d0f12;
+      color: #e6e6e6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* LIQUID GLASS BASE */
+    .glass {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(18px) saturate(180%);
+      -webkit-backdrop-filter: blur(18px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 18px;
+      box-shadow: 0 0 20px rgba(0, 153, 255, 0.25);
+    }
+
+    /* NAVIGATION */
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+    }
+
+    nav {
+      width: 90%;
+      max-width: 700px;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      padding: 12px 20px;
+    }
+
+    .nav-btn {
+      padding: 10px 22px;
+      border-radius: 14px;
+      text-decoration: none;
+      color: #e6e6e6;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: all 0.25s ease;
+      border: 1px solid rgba(0, 153, 255, 0.4);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-btn:hover {
+      color: #00aaff;
+      box-shadow: 0 0 12px rgba(0, 153, 255, 0.7),
+                  inset 0 0 12px rgba(0, 153, 255, 0.4);
+      border-color: rgba(0, 153, 255, 0.8);
+      transform: translateY(-2px);
+    }
+
+    /* MAIN CONTENT */
+    main {
+      width: 90%;
+      max-width: 1200px;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+
+    /* IMAGE GRID */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .image-box {
+      height: 200px;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .image-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 20px rgba(0, 153, 255, 0.6);
+    }
+
+    /* QUOTE SECTIONS */
+    .quote-section {
+      padding: 30px;
+      border-left: 4px solid #00aaff;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: inset 0 0 12px rgba(0, 153, 255, 0.3);
+    }
+
+    .quote-section h2 {
+      margin-bottom: 12px;
+      font-size: 1.6rem;
+      color: #00aaff;
+    }
+
+    .quote-section p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .nav-btn {
+        padding: 8px 14px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <nav class="glass">
+      <div class="nav-bar">
+        <a href="#" class="nav-btn">HOME</a>
+        <a href="#" class="nav-btn">EXPLORE</a>
+        <a href="#" class="nav-btn">PROFILE</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- HERO -->
+    <section class="hero glass">
+      <h1>WELCOME TO F O R E R U N N E R</h1>
+      <p>Dedicated for U-E-F-N Users, where the <b>SKY</b> is the limit.</p>
+    </section>
+
+    <!-- IMAGE GRID -->
+    <section class="image-grid">
+      <div class="image-box glass">
+        <img src="c:\Users\kylem\OneDrive\DeskTop\WEBSITE\row-1-column-1 (1).jpg" alt="Image 1">
+      </div>
+      <div class="image-box glass">
+        <img src="c:\Users\kylem\OneDrive\DeskTop\WEBSITE\row-1-column-2.jpg" alt="Image 2">
+      </div>
+      <div class="image-box glass">
+        <img src="c:\Users\kylem\OneDrive\DeskTop\WEBSITE\row-1-column-3.jpg" alt="Image 3">
+      </div>
+      <div class="image-box glass">
+        <img src="c:\Users\kylem\OneDrive\DeskTop\WEBSITE\fortnite-battle-royale-season-7-ice-king-lynx-zenith-57-4K.jpg" alt="Image 4">
+      </div>
+    </section>
+
+    <!-- QUOTE SECTION 1 -->
+    <section class="quote-section glass">
+      <h2>Quote of the Day</h2>
+      <p>
+        “FORERUNNER is something Ive been waiting for, and its amazing, well worth the wait !  
+        Thankyou - KAYO.”
+      </p>
+    </section>
+
+    <!-- QUOTE SECTION 2 -->
+    <section class="quote-section glass">
+      <h2>Inspiration</h2>
+      <p>
+        “Forerunner is a Great platform and has everything I need to get started!.”
+      </p>
+    </section>
+
+  </main>
+
+</body>
+</html>
+
+
+
+
