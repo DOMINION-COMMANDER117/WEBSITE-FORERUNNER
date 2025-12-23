@@ -33,6 +33,33 @@
       box-shadow: 0 0 20px rgba(0, 153, 255, 0.25);
     }
 
+    /* NEW — BLURRED BACKGROUND BEHIND TITLE */
+    .home-title-box {
+      position: relative;
+      padding: 40px;
+      border-radius: 18px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .home-title-box::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("https://picsum.photos/1200/600?blur=3");
+      background-size: cover;
+      background-position: center;
+      filter: blur(6px) brightness(0.55);
+      opacity: 0.35;
+      z-index: 0;
+    }
+
+    .home-title-box h1,
+    .home-title-box p {
+      position: relative;
+      z-index: 1;
+    }
+
     /* NAVIGATION */
     header {
       width: 100%;
@@ -175,8 +202,8 @@
   <!-- MAIN CONTENT -->
   <main>
 
-    <!-- HERO -->
-    <section class="hero glass">
+    <!-- HERO WITH BLURRED BACKGROUND -->
+    <section class="hero glass home-title-box">
       <h1>WELCOME TO F O R E R U N N E R</h1>
       <p>Dedicated for U-E-F-N Users, where the <b>SKY</b> is the limit.</p>
     </section>
@@ -218,7 +245,3 @@
 
 </body>
 </html>
-
-
-
-
