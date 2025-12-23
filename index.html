@@ -241,11 +241,16 @@
 </html>
 
 
-<!-- Background Image Override -->
+<!-- Full‑Page Background Layer (Does NOT affect layout) -->
+<div class="page-bg"></div>
+
 <style>
-  body {
-    background-image: url("Daf1Oq.png");
-    background-size: center;
+  .page-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1; /* stays behind everything */
+    background-image: url("https://picsum.photos/1920/1080");
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
