@@ -59,6 +59,77 @@
       z-index: 1;
     }
 
+    ________________________________________________________________________
+
+
+    /* DRIVE SECTION WRAPPER */
+.drive-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 60px auto 0;
+}
+
+/* DRIVE BANNER CARD */
+.drive-banner {
+  padding: 40px;
+  border-radius: 18px;
+  text-align: center;
+  border: 3px solid transparent;
+  animation: glow-cycle 6s linear infinite;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* TITLE */
+.drive-banner h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 6px;
+  margin-bottom: 20px;
+}
+
+/* DATE */
+.drive-banner .updated {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-top: 20px;
+}
+
+/* ANIMATED GLOW */
+@keyframes glow-cycle {
+  0%   { box-shadow: 0 0 12px var(--c1), 0 0 24px var(--c1); }
+  33%  { box-shadow: 0 0 12px var(--c2), 0 0 24px var(--c2); }
+  66%  { box-shadow: 0 0 12px var(--c3), 0 0 24px var(--c3); }
+  100% { box-shadow: 0 0 12px var(--c1), 0 0 24px var(--c1); }
+}
+
+/* COLOR THEMES */
+.kayo-drive {
+  --c1: #00aaff;
+  --c2: #8a2be2;
+  --c3: #00e5ff;
+}
+
+.dogs-drive {
+  --c1: #ff7b00;
+  --c2: #ff5500;
+  --c3: #000000;
+}
+
+.eves-drive {
+  --c1: #ff4fd8;
+  --c2: #00ff9c;
+  --c3: #00e0ff;
+}
+
+
+    _______________________________________________
+
+
+    
     /* NAVIGATION */
     header {
       width: 100%;
@@ -280,6 +351,7 @@
 
 </body>
 </html>
+
 
 
 
